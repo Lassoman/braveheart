@@ -5,6 +5,8 @@ use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\ErrorHandler\Debug;
 use Symfony\Component\HttpFoundation\Request;
 
+// dans le dossier symfony toute wles requetttes http vont passer par ce fichier index.php et en fonction de la requette on fera apppel aux differents controlleurs
+
 require dirname(__DIR__).'/vendor/autoload.php';
 
 (new Dotenv())->bootEnv(dirname(__DIR__).'/.env');
@@ -28,3 +30,4 @@ $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
+
