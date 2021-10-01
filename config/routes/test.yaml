@@ -1,9 +1,9 @@
-test:
-  path: /test/{age<\d+>?0}
-  controller: App\Controller\TestController::test
+# test:
+#   path: /test/{age<\d+>?0}
+#   controller: App\Controller\TestController::test
 
-  # api.monsite.com /www.monsite.com
-  # defaults:
-  #     age: 0
-  # requirements:
-  #   age: \d+
+#   # api.monsite.com /www.monsite.com
+#   # defaults:
+#   #     age: 0
+#   # requirements:
+#   #   age: \d+

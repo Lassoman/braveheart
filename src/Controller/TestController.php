@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class TestController 
 {
@@ -12,6 +13,10 @@ class TestController
         var_dump("Ca fonctionne");
         die();
     }
+
+    /**
+     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET","POST"}
+     */
     public function test( Request $request)
     {
         dump($request);
@@ -27,3 +32,5 @@ class TestController
         
     }
 }
+
+//fdjkfkjbfkbfkbfblirvverertbettebyj
