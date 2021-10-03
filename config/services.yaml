@@ -31,6 +31,10 @@ services:
     # please note that last definitions always *replace* previous ones
     App\Taxes\Calculator:
         arguments:
-            $tva : 20
+            $tva: 20
+
+    App\Taxes\Detector:
+        arguments:
+            $seuil: 100
 
     Cocur\Slugify\Slugify: ~

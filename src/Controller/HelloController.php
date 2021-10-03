@@ -18,21 +18,14 @@ class HelloController
  * @Route("/hello/{prenom?world}", name="hello")
  */
 
-public function hello ($prenom = "World", LoggerInterface $logger, Calculator $calculator, Slugify $slugify, Environment $twig, Detector $detector)
+public function hello ($prenom = "World", Environment $twig)
     {
-        dump($detector->detect(101));
-        dump($detector->detect(10));
-
-        dump($twig);
-
-        dump($slugify->slugify("hello world"));
-        
-        $logger->error("Mon message de log !");
-        
-        $tva= $calculator->calcul(100);
-
-        dump($tva);
-
-        return new Response( "hello $prenom");
+       
+        $html = $twig->render('hello.html.twig', [
+            'prenom' => $prenom,
+            'age' => '33',
+            'prenoms' => [ 'lasso', 'vass', 'mohamed','bertrand', 'zoumana','falikou','binta','soyleyman','mario']
+        ]);
+        return new Response($html);
     }
 }
