@@ -8,14 +8,15 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController 
 {
+    /**
+     * @Route("/", name="index")
+     */
     public function index()
     {
-        var_dump("Ca fonctionne");
-        die();
+        Return new Response("Bienvenue sur Braveheart");
     }
-
     /**
-     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET","POST"}
+     * @Route("/test/{age<\d+>?0}", name="test", methods={"GET","POST"})
      */
     public function test( Request $request)
     {
@@ -33,4 +34,3 @@ class TestController
     }
 }
 
-//fdjkfkjbfkbfkbfblirvverertbettebyj
