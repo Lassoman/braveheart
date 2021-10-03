@@ -22,3 +22,4 @@ class Calculator
         return $prix * (20/100);
     }
 }
+
