@@ -15,7 +15,7 @@ class HomeController extends AbstractController{
      * @Route("/", name="homepage")
      */
     
-    public function homepage(EntityManagerInterface $em)
+    public function homepage(CoachingRepository $coachingRepository)
     {
 
         //count([])
@@ -24,14 +24,11 @@ class HomeController extends AbstractController{
         //findOneBy([])
         //findAll()
        
-        $coachingRepository = $em -> getRepository(Coaching::class);//dabord on recupere le repository des articles grace au manager
-        $coaching = $coachingRepository->find(3);//ensuite on lui dit quoi chercher
+        $coachings = $coachingRepository->findBy([],[],3);
 
-        $coaching->setPrice(30000);
-       
-        $em->flush();
-        dd($coaching);
+        
 
-        return $this->render('home.html.twig');
+        return $this->render('home.html.twig', ['coachings' =>$coachings
+        ]);
     }
 }

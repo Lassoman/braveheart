@@ -2,8 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\CoachingRepository;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\CoachingRepository;
+use Symfony\Component\HttpFoundation\File\File;
+
+
 
 /**
  * @ORM\Entity(repositoryClass=CoachingRepository::class)
@@ -31,6 +34,18 @@ class Coaching
      * @ORM\Column(type="string", length=255)
      */
     private $slug;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description;
+
+
 
     public function getId(): ?int
     {
@@ -74,6 +89,30 @@ class Coaching
     public function setSlug(string $slug): self
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
