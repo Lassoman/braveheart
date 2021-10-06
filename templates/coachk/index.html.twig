@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coaching solo{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper {text-align: center; margin: 10em auto; max-width: 800px; width: 800%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    
+</style>
+
+
+<div class="example-wrapper" >
+    <h1>{{ controller_name }}! </h1>
+    
+</div>
+
+
+<section class="section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div>
+          <img alt="Web Studio" class="img-fluid" src="{{article.image}}" />
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
+        <div>
+          <h2>{{article.titre}}</h2>
+          <h3>Coach spotif Diplômé</h3>
+            <hr>
+          <p class="margin-top-s">{{article.contenu}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section mt-5">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
+    <div>
+      <h2>MES FORMATIONS</h2>
+        <hr>
+      <p class="margin-top-s"> C’est en 2014 que j’opte pour le cursus universitaire STAPS à Angoulême afin de m’orienter vers les métiers du sport. À l’issue de ma troisième année, je me spécialise dans la préparation physique à la faculté de Clermont-Ferrand.<br><br> En 2017, je décroche ma Licence mention Entraînement Sportif et spécialité Musculation et Haltérophilie. N’ayant pas toutes les connaissances nécessaires pour un suivi optimal de mes clients, je décide de continuer à me former en parallèle de mon activité.<br>
+        Je commence donc la formation Bayesian Bodybuilding qui traite des sciences de l’entraînement et de la nutrition. Cette dernière me permet d’acquérir bon nombre de connaissances et d’améliorer la qualité de mes suivis.<br><br>
+      
+      J’obtiens en même temps la certification Nerdy Muscle Academy qui est surtout orientée sur la nutrition et la santé.<br>
+      
+      Étant une personne qui remet constamment en question ses connaissances, je suis actuellement la formation Projet Résilience qui est axée sur la santé et l’art de vivre de façon résilience avec la nature et soi-même.<br>
+      
+      J’ai donc en ma possession les bagages nécessaires pour vous amener à être la meilleure version de vous-même.</p>
+    </div>
+  </div>
+
+  
+      <div class="col-md-6 ">
+        <div>
+          <img alt="Web Studio" class="img-fluid" src="https://images.pexels.com/photos/6551133/pexels-photo-6551133.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" />
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

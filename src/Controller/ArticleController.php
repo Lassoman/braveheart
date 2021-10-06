@@ -14,7 +14,7 @@ class ArticleController extends AbstractController
     public function index(): Response
     {
         return $this->render('article/index.html.twig', [
-            'controller_name' => 'CARDIO TRAINING',
+            'controller_name' => 'coaching solo',
         ]);
     }
 }

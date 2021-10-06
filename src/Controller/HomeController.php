@@ -26,6 +26,8 @@ class HomeController extends AbstractController{
        
         $coachings = $coachingRepository->findBy([],[],3);
 
+        dump($coachings);
+
         
 
         return $this->render('home.html.twig', ['coachings' =>$coachings
