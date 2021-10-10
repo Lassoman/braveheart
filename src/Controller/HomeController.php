@@ -24,9 +24,9 @@ class HomeController extends AbstractController{
         //findOneBy([])
         //findAll()
        
-        $coachings = $coachingRepository->findBy([],[],3);
+        $coachings = $coachingRepository->findBy([],[],6);
 
-        dump($coachings);
+        // dd($coachings);
 
         
 
