@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title%}
+    Création d'un coach
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h1>Nouveau Coach</h1>
+
+        {{form(formView)}} 
+        {# twig affiche le resultat d'une fonction"form" bet on lui passe notre variable formView  #}
+    </div>
+{% endblock %}

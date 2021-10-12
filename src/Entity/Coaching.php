@@ -45,6 +45,11 @@ class Coaching
      */
     private $description;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="coachings")
+     */
+    private $category;
+
 
 
     public function getId(): ?int
@@ -113,6 +118,18 @@ class Coaching
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
