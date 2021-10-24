@@ -50,6 +50,46 @@ class Coaching
      */
     private $category;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $minutes;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $intensite;
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $name_b;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description_b;
+    
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $name_c;
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $description_c;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image_b;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $image_c;
+
+
+
 
 
     public function getId(): ?int
@@ -130,6 +170,102 @@ class Coaching
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getMinutes(): ?string
+    {
+        return $this->minutes;
+    }
+
+    public function setMinutes(?string $minutes): self
+    {
+        $this->minutes = $minutes;
+
+        return $this;
+    }
+
+    public function getIntensite(): ?string
+    {
+        return $this->intensite;
+    }
+
+    public function setIntensite(?string $intensite): self
+    {
+        $this->intensite = $intensite;
+
+        return $this;
+    }
+
+    public function getDescriptionB(): ?string
+    {
+        return $this->description_b;
+    }
+
+    public function setDescriptionB(?string $description_b): self
+    {
+        $this->description_b = $description_b;
+
+        return $this;
+    }
+
+    public function getDescriptionC(): ?string
+    {
+        return $this->description_c;
+    }
+
+    public function setDescriptionC(string $description_c): self
+    {
+        $this->description_c = $description_c;
+
+        return $this;
+    }
+
+    public function getNameB(): ?string
+    {
+        return $this->name_b;
+    }
+
+    public function setNameB(?string $name_b): self
+    {
+        $this->name_b = $name_b;
+
+        return $this;
+    }
+
+    public function getNameC(): ?string
+    {
+        return $this->name_c;
+    }
+
+    public function setNameC(?string $name_c): self
+    {
+        $this->name_c = $name_c;
+
+        return $this;
+    }
+
+    public function getImageB(): ?string
+    {
+        return $this->image_b;
+    }
+
+    public function setImageB(?string $image_b): self
+    {
+        $this->image_b = $image_b;
+
+        return $this;
+    }
+
+    public function getImageC(): ?string
+    {
+        return $this->image_c;
+    }
+
+    public function setImageC(?string $image_c): self
+    {
+        $this->image_c = $image_c;
 
         return $this;
     }

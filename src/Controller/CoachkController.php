@@ -37,18 +37,18 @@ class CoachkController extends AbstractController
 
         $builder->add('name', TextType::class, [
             'label'=> 'Nom du coach',
-            'attr' => ['class' => 'form-control', 'placeholder' =>'Tapez le nom du coach']
+            'attr' => ['placeholder' =>'Tapez le nom du coach']
         ])
         ->add('description', TextareaType::class,[
             'label'=> 'Tapez votre description',
-            'attr' => ['class' => 'form-control', 'placeholder' =>'Vous pouvez taper votre texte']
+            'attr' => ['placeholder' =>'Vous pouvez taper votre texte']
         ])
         ->add('pseudo', TextType::class, [
             'label'=> 'Tapez votre pseudo',
-            'attr' => ['class' => 'form-control', 'placeholder' =>'Tapez votre pseudonyme']
+            'attr' => [ 'placeholder' =>'Tapez votre pseudonyme']
         ])
         ->add('image', UrlType::class,[
-            'attr' => ['class' => 'form-control', 'placeholder' =>'glissez votre image']
+            'attr' => ['placeholder' =>'glissez votre image']
         ]);
 
         $form = $builder->getForm();

@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coaching{% endblock %}
+
+{% block body %}
+    <h1>Coaching</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ coaching.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ coaching.name }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ coaching.price }}</td>
+            </tr>
+            <tr>
+                <th>Slug</th>
+                <td>{{ coaching.slug }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ coaching.image }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ coaching.description }}</td>
+            </tr>
+            <tr>
+                <th>Minutes</th>
+                <td>{{ coaching.minutes }}</td>
+            </tr>
+            <tr>
+                <th>Intensite</th>
+                <td>{{ coaching.intensite }}</td>
+            </tr>
+            <tr>
+                <th>Name_b</th>
+                <td>{{ coaching.nameB }}</td>
+            </tr>
+            <tr>
+                <th>Description_b</th>
+                <td>{{ coaching.descriptionB }}</td>
+            </tr>
+            <tr>
+                <th>Name_c</th>
+                <td>{{ coaching.nameC }}</td>
+            </tr>
+            <tr>
+                <th>Description_c</th>
+                <td>{{ coaching.descriptionC }}</td>
+            </tr>
+            <tr>
+                <th>Image_b</th>
+                <td>{{ coaching.imageB }}</td>
+            </tr>
+            <tr>
+                <th>Image_c</th>
+                <td>{{ coaching.imageC }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_coaching_index') }}">back to list</a>
+
+    <a href="{{ path('admin_coaching_edit', {'id': coaching.id}) }}">edit</a>
+
+    {{ include('admin_coaching/_delete_form.html.twig') }}
+{% endblock %}

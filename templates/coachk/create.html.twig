@@ -1,13 +1,41 @@
 {% extends "base.html.twig" %}
 
+{# {%form_theme formView 'bootstrap_4_layout.html.twig' %} #}
+
 {% block title%}
-    Création d'un coach
+	Création d'un coach
 {% endblock %}
 {% block body %}
-<div class="container">
-    <h1>Nouveau Coach</h1>
+	<div class="container">
+		<h1>Nouveau Coach</h1>
 
-        {{form(formView)}} 
-        {# twig affiche le resultat d'une fonction"form" bet on lui passe notre variable formView  #}
-    </div>
+		{# {{form(formView)}}  #}
+		{# twig affiche le resultat d'une fonction"form" bet on lui passe notre variable formView  #}
+		{{ form_start(formView) }}
+
+		{{ form_errors(formView) }}
+
+		{# {{ form_widget(formView) }} #}
+		<div class="row">
+			<div class="col">
+            {{ form_row(formView.name) }}
+            {{ form_row(formView.pseudo) }}
+        
+            </div>
+			<div class="col">
+            {{ form_row(formView.description) }}
+            {{ form_row(formView.image) }}
+        
+            </div>
+		</div>
+
+
+		<button class="submit btn btn-primary">
+			<i class="fas fa-save"></i>
+			Créer le produit
+		</button>
+		{{ form_end(formView) }}
+	</div>
 {% endblock %}
+
+

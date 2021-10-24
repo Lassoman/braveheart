@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Coaching index{% endblock %}
+
+{% block body %}
+    <h1>Coaching index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Slug</th>
+                <th>Image</th>
+                <th>Description</th>
+                <th>Minutes</th>
+                <th>Intensite</th>
+                <th>Name_b</th>
+                <th>Description_b</th>
+                <th>Name_c</th>
+                <th>Description_c</th>
+                <th>Image_b</th>
+                <th>Image_c</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for coaching in coachings %}
+            <tr>
+                <td>{{ coaching.id }}</td>
+                <td>{{ coaching.name }}</td>
+                <td>{{ coaching.price }}</td>
+                <td>{{ coaching.slug }}</td>
+                <td>{{ coaching.image }}</td>
+                <td>{{ coaching.description }}</td>
+                <td>{{ coaching.minutes }}</td>
+                <td>{{ coaching.intensite }}</td>
+                <td>{{ coaching.nameB }}</td>
+                <td>{{ coaching.descriptionB }}</td>
+                <td>{{ coaching.nameC }}</td>
+                <td>{{ coaching.descriptionC }}</td>
+                <td>{{ coaching.imageB }}</td>
+                <td>{{ coaching.imageC }}</td>
+                <td>
+                    <a href="{{ path('admin_coaching_show', {'id': coaching.id}) }}">show</a>
+                    <a href="{{ path('admin_coaching_edit', {'id': coaching.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="15">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_coaching_new') }}">Create new</a>
+{% endblock %}

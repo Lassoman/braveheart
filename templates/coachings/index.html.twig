@@ -44,9 +44,10 @@
     <h1>cours de coaching solo </h1>
     <h3 style="color:orange;">Cardio</h3>
     <br>
-      <h4>HAUTE INTENSITÉ</h4>
-        <h4>45min/60min</h4>
+      <h4>{{coaching.intensite}}</h4>
+        <h4>{{ coaching.minutes}}</h4>
 </div>
+
 
 
 <section class="section mt-5">
@@ -59,8 +60,8 @@
       </div>
       <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
         <div>
-          <h2>Le coaching solo</h2>
-          <p class="margin-top-s">L’entraînement cardio vasculaire est une discipline qui permet aux pratiquants de travailler leur endurance et d’améliorer leurs performances cardiaques.<br><br> Pour y parvenir, il est nécessaire de répartir l’effort physique sur la durée et d’opter pour une intensité d’exercice plutôt moyenne afin d’être capable de tenir le rythme. Tapis, vélos, elliptiques, rameurs, corde à sauter… Fitness Park met à la disposition de ses adhérents tout le matériel nécessaire pour les exercices cardio vasculaires. <br><br>Le cardio training est également intéressant pour les sportifs qui sont en période de sèche ou les personnes désirant perdre du poids car il permet d’augmenter les dépenses caloriques journalières.</p>
+          <h2>{{ coaching.name}}</h2>
+          <p class="margin-top-s">{{ coaching.description}}</p>
         </div>
       </div>
     </div>
@@ -72,9 +73,8 @@
     <div class="row">
     <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
     <div>
-      <h2>POUR QUI ?</h2>
-      <p class="margin-top-s">Pour les novices qui souhaitent se mettre au sport, pour ceux qui veulent reprendre une activité sportive ou encore pour les sportifs avérés qui souhaitent accroître leur niveau d’endurance.<br><br>
-        Le cardio-training s’adapte à tes besoins et à ton niveau d’endurance. Tu vas à ton rythme et augmente l’intensité et/ou la durée au fil des entraînements. Ta respiration se régule, tes muscles se développent et ton corps se transforme.</p>
+      <h2>{{coaching.nameB}}</h2>
+      <p class="margin-top-s">{{coaching.descriptionB}}</p>
     </div>
   </div>
 
@@ -99,7 +99,7 @@
       </div>
       <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
         <div>
-          <h2>POUR QUOI ?</h2>
+          <h2>{{coaching.nameC}}</h2>
           <p class="margin-top-s"><p>Avant tout pour travailler et développer ton endurance, tes performances cardiaques et ainsi améliorer ta condition physique.</p>
 
           <p> Le cardio training t’aidera également à :</p>
@@ -115,13 +115,12 @@
     </div>
   </div>
 </section>
-<div class="text-center mt-3 mb-3">
-<a href="#" class="btn btn-success">Réserver une séance</a>
-</div>
+
 
 
 <section class="pricing py-5">
-  <div class="container">
+<div class="container prix">
+<h2>Les formules de ce coaching</h2>
     <div class="row">
       <!-- Free Tier -->
       <div class="col-lg-4">

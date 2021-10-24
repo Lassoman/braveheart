@@ -1,74 +1,123 @@
 body{
-    .img-list-admin{
-        max-width: 550px;
+  .img-list-admin{
+      max-width: 550px;
 
-    }
-    .card{
-        border: none;
+  }
+  .card{
+      border: none;
+  }
+  
+  #service{
+    background: white;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 45px 0 55px 0;
+  }
+#service h1{
+  color: #d2003c;
+  font-family: brandon-grotesque,Arial,sans-serif;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 90px;
+  background-repeat: no-repeat;
+  background-position: 0 72px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  float: left;
+  padding-left: 20px;
+  min-width: 496px;
+}
+#service{
+  background: white;
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 45px 0 55px 0;
+}
+#service{
+  background: white;
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 45px 0 55px 0;
+}
+#service{
+  background: white;
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  padding: 45px 0 55px 0;
+}
+#service h3
+  {
+    font-size: 28px;
+    color: #c1c1c1;
+    font-family: brandon-grotesque,Arial,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+
+    
+    .pricing .card {
+      border: none;
+      border-radius: 1rem;
+      transition: all 0.2s;
+      box-shadow: 0 0.5rem 1rem 0 rgba(224, 35, 35, 0.1);
     }
     
-    section.pricing {
-      
-      }
-      
-      .pricing .card {
-        border: none;
-        border-radius: 1rem;
-        transition: all 0.2s;
-        box-shadow: 0 0.5rem 1rem 0 rgba(224, 35, 35, 0.1);
-      }
-      
-      .pricing hr {
-        margin: 1.5rem 0;
-      }
-      
-      .pricing .card-title {
-        margin: 0.5rem 0;
-        font-size: 0.9rem;
-        letter-spacing: .1rem;
-        font-weight: bold;
-      }
-      
-      .pricing .card-price {
-        font-size: 2rem;
-        margin: 0;
-        color: rgb(73, 73, 77);
-      }
-      
-      .pricing .card-price .period {
-        font-size: 0.8rem;
-      }
-      
-      .pricing ul li {
-        margin-bottom: 1rem;
-      }
-      
-      .pricing .text-muted {
-        opacity: 0.7;
-      }
-      
-      .pricing .btn {
-        font-size: 80%;
-        border-radius: 5rem;
-        letter-spacing: .1rem;
-        font-weight: bold;
-        padding: 1rem;
-        opacity: 0.7;
-        transition: all 0.2s;
-        background-color: rgb(11, 173, 119);
-      }
-      
-      /* Hover Effects on Card */
-      
-      @media (min-width: 992px) {
-        .pricing .card:hover {
-          margin-top: -.25rem;
-          margin-bottom: .25rem;
-          box-shadow: 0 0.5rem 1rem 0 rgba(27, 18, 18, 0.3);
-        }
-      
-        .pricing .card:hover .btn {
-          opacity: 1;
-        }
+    .pricing hr {
+      margin: 1.5rem 0;
     }
+    
+    .pricing .card-title {
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+      letter-spacing: .1rem;
+      font-weight: bold;
+    }
+    
+    .pricing .card-price {
+      font-size: 2rem;
+      margin: 0;
+      color: rgb(73, 73, 77);
+    }
+    
+    .pricing .card-price .period {
+      font-size: 0.8rem;
+    }
+    
+    .pricing ul li {
+      margin-bottom: 1rem;
+    }
+    
+    .pricing .text-muted {
+      opacity: 0.7;
+    }
+    
+    .pricing .btn {
+      font-size: 80%;
+      border-radius: 5rem;
+      letter-spacing: .1rem;
+      font-weight: bold;
+      padding: 1rem;
+      opacity: 0.7;
+      transition: all 0.2s;
+      background-color: rgb(11, 173, 119);
+    }
+    
+    /* Hover Effects on Card */
+    
+    @media (min-width: 992px) {
+      .pricing .card:hover {
+        margin-top: -.25rem;
+        margin-bottom: .25rem;
+        box-shadow: 0 0.5rem 1rem 0 rgba(27, 18, 18, 0.3);
+      }
+    
+      .pricing .card:hover .btn {
+        opacity: 1;
+      }
+  }
 }
